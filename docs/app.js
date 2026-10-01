@@ -110,7 +110,7 @@ dayButtons.forEach((button) => {
       return;
     }
 
-    window.location.href = './assets/daily-english-reading.mp4';
+    window.location.href = './videos/2026-10-01.html';
   });
 });
 
@@ -138,7 +138,11 @@ if ('serviceWorker' in navigator) {
   });
 
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js').then((registration) => {
+    const manifestPath =
+      document.querySelector('link[rel="manifest"]')?.getAttribute('href') ?? './manifest.webmanifest';
+    const serviceWorkerUrl = new URL('sw.js', new URL(manifestPath, window.location.href));
+
+    navigator.serviceWorker.register(serviceWorkerUrl).then((registration) => {
       registration.update();
     });
   });

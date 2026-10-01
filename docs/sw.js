@@ -1,8 +1,9 @@
-const CACHE_NAME = 'daily-english-reading-v9-caption-translation';
+const CACHE_NAME = 'daily-english-reading-v10-video-detail';
 const APP_SHELL = [
   './',
   './index.html',
   './archive.html',
+  './videos/2026-10-01.html',
   './styles.css',
   './app.js',
   './manifest.webmanifest',

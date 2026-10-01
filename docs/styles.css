@@ -674,6 +674,109 @@ pre {
     linear-gradient(180deg, #ffffff 0%, #eefaff 100%);
 }
 
+.detail-hero {
+  background:
+    radial-gradient(circle at 88% 0%, rgba(255, 197, 38, 0.26) 0%, rgba(255, 197, 38, 0) 34%),
+    linear-gradient(180deg, #ffffff 0%, #eefaff 100%);
+}
+
+.detail-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.detail-nav a {
+  border: 3px solid var(--blue);
+  border-radius: 999px;
+  padding: 10px 16px;
+  color: var(--blue);
+  background: var(--white);
+  font-size: 14px;
+  font-weight: 1000;
+  text-decoration: none;
+}
+
+.detail-section {
+  border-top: 1px solid var(--line);
+}
+
+.detail-video-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 380px) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 60px);
+  align-items: center;
+  margin-top: 38px;
+}
+
+.detail-summary {
+  border-top: 4px solid var(--blue);
+  border-bottom: 4px solid var(--blue);
+  padding: 26px 0;
+}
+
+.detail-summary h3 {
+  margin: 12px 0 0;
+  color: var(--blue);
+  font-size: clamp(28px, 5vw, 46px);
+  line-height: 1.12;
+  font-weight: 1000;
+}
+
+.detail-summary p:not(.archive-date) {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
+  font-weight: 750;
+}
+
+.source-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 34px;
+  background: var(--line);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.source-list article {
+  min-width: 0;
+  padding: 28px;
+  background: var(--white);
+}
+
+.source-list h3 {
+  margin: 0;
+  color: var(--blue);
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 1000;
+}
+
+.source-list p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 750;
+}
+
+.source-list a {
+  display: inline-flex;
+  margin-top: 18px;
+  border: 3px solid var(--blue);
+  border-radius: 999px;
+  padding: 8px 14px;
+  color: var(--blue);
+  background: var(--white);
+  font-size: 13px;
+  font-weight: 1000;
+  text-decoration: none;
+}
+
 .source-links {
   display: flex;
   flex-wrap: wrap;
@@ -772,7 +875,9 @@ pre {
   }
 
   .video-layout,
-  .meaning-grid {
+  .detail-video-layout,
+  .meaning-grid,
+  .source-list {
     grid-template-columns: 1fr;
   }
 
