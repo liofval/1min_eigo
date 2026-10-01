@@ -110,7 +110,7 @@ dayButtons.forEach((button) => {
       return;
     }
 
-    window.location.href = './videos/2026-10-01.html';
+    window.location.href = `./videos/${button.dataset.openDay}.html`;
   });
 });
 

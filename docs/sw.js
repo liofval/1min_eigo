@@ -1,15 +1,18 @@
-const CACHE_NAME = 'daily-english-reading-v15-date-intro';
+const CACHE_NAME = 'daily-english-reading-v16-2026-10-02';
 const APP_SHELL = [
   './',
   './index.html',
   './archive.html',
   './videos/2026-10-01.html',
+  './videos/2026-10-02.html',
   './styles.css',
   './app.js',
   './manifest.webmanifest',
   './assets/icon.png',
   './assets/profile-vertical.png',
-  './assets/video-poster.png?v=margin-safe-5',
+  './assets/video-poster.png?v=2026-10-02-date-intro',
+  './assets/videos/2026-10-01/video-poster.png?v=2026-10-01-date-intro',
+  './assets/videos/2026-10-02/video-poster.png?v=2026-10-02-date-intro',
   './assets/caption.txt',
   './assets/translation-ja.txt',
   './icons/icon-192.png',
