@@ -8,5 +8,7 @@ tmp/
 
 # Generated daily content. Remove this line if you want to commit a specific day.
 data/today-reading.json
+data/today-caption.txt
+data/today-translation-ja.txt
 data/today-captions-ja.txt
 data/latest-run.json

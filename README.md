@@ -1,6 +1,6 @@
 # Daily English Reading Video
 
-Remotion で縦型の音読練習動画を作るプロジェクトです。毎日 `npm run daily` を実行すると、その日の英語日常会話テキストを生成し、文章が縦にゆっくり流れる動画と日本語キャプション案を `out/` 配下の実行ごとのディレクトリに出力します。
+Remotion で縦型の音読練習動画を作るプロジェクトです。毎日 `npm run daily` を実行すると、その日の英語日常会話テキストを生成し、文章が縦にゆっくり流れる動画、投稿キャプション案、日本語訳を `out/` 配下の実行ごとのディレクトリに出力します。
 
 ## Setup
 
@@ -21,7 +21,7 @@ npm run studio
 npm run daily
 ```
 
-生成される本文は `data/today-reading.json`、直近の日本語キャプション案は `data/today-captions-ja.txt` です。Claude Code で毎日走らせる場合も、このコマンドだけで本文生成から動画レンダリングまで完了します。
+生成される本文は `data/today-reading.json`、投稿用キャプション案は `data/today-caption.txt`、日本語訳は `data/today-translation-ja.txt` です。Claude Code で毎日走らせる場合も、このコマンドだけで本文生成から動画レンダリングまで完了します。
 
 ```bash
 npm run daily
@@ -32,6 +32,8 @@ npm run daily
 ```text
 out/2026-10-01-124355-a-quiet-lunch-with-a-coworker/
   daily-english-reading.mp4
+  caption.txt
+  translation-ja.txt
   captions-ja.txt
   reading.json
 ```
@@ -61,7 +63,8 @@ http://127.0.0.1:8777/
 
 - 今日の縦型音読動画
 - 動画内の表示の意味の説明
-- 日本語キャプション案
+- 投稿キャプション案
+- 日本語訳
 - ニュース出典リンク
 - 問い合わせ先
 - PWA用 `manifest.webmanifest` と Service Worker

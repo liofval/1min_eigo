@@ -1,4 +1,4 @@
-const CACHE_NAME = 'daily-english-reading-v8-calendar-archive';
+const CACHE_NAME = 'daily-english-reading-v9-caption-translation';
 const APP_SHELL = [
   './',
   './index.html',
@@ -9,6 +9,8 @@ const APP_SHELL = [
   './assets/icon.png',
   './assets/profile-vertical.png',
   './assets/video-poster.png',
+  './assets/caption.txt',
+  './assets/translation-ja.txt',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/apple-touch-icon.png'

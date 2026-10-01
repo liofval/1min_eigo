@@ -302,6 +302,11 @@ h1 {
   box-shadow: 0 28px 70px rgba(0, 67, 132, 0.18);
 }
 
+.copy-panels {
+  display: grid;
+  gap: 28px;
+}
+
 .caption-panel {
   border-top: 4px solid var(--blue);
   border-bottom: 4px solid var(--blue);

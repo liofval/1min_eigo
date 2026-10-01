@@ -27,4 +27,5 @@ if (result.status !== 0) {
 }
 
 console.log(`Video: ${latestRun.videoPath}`);
-console.log(`Japanese captions: ${latestRun.captionsPath}`);
+console.log(`Post caption: ${latestRun.captionPath}`);
+console.log(`Japanese translation: ${latestRun.translationJaPath}`);

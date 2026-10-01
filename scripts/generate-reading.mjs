@@ -183,7 +183,7 @@ const reading = {
   closing,
 };
 
-const captionJa = [
+const translationJa = [
   story.titleJa,
   '',
   story.openingJa,
@@ -210,11 +210,29 @@ const captionJa = [
   '',
 ].join('\n');
 
+const postCaption = [
+  `${story.titleJa}`,
+  '',
+  '今日の70秒音読。',
+  `${story.openingJa}`,
+  '',
+  '画面から英文が消える前に、声に出して読んでみてください。',
+  '短い文だけで、日常会話のスピード感を少しずつ作る練習です。',
+  '',
+  `Level: ${reading.level}`,
+  'Read it before it disappears.',
+  '',
+  '#英語学習 #英語音読 #日常英会話 #やさしい英語 #1分英語 #英語リスニング #英語スピーキング #毎日英語',
+  '',
+].join('\n');
+
 const runId = `${dateKey}-${timeParts.hour}${timeParts.minute}${timeParts.second}-${slugify(
   story.title,
 )}`;
 const runDir = path.join('out', runId);
 const runReadingPath = path.join(runDir, 'reading.json');
+const runCaptionPath = path.join(runDir, 'caption.txt');
+const runTranslationJaPath = path.join(runDir, 'translation-ja.txt');
 const runCaptionsPath = path.join(runDir, 'captions-ja.txt');
 const runVideoPath = path.join(runDir, 'daily-english-reading.mp4');
 
@@ -222,6 +240,8 @@ const latestRun = {
   runId,
   runDir,
   readingPath: runReadingPath,
+  captionPath: runCaptionPath,
+  translationJaPath: runTranslationJaPath,
   captionsPath: runCaptionsPath,
   videoPath: runVideoPath,
 };
@@ -230,9 +250,13 @@ await mkdir('data', {recursive: true});
 await mkdir(runDir, {recursive: true});
 
 await writeFile(path.join('data', 'today-reading.json'), `${JSON.stringify(reading, null, 2)}\n`);
-await writeFile(path.join('data', 'today-captions-ja.txt'), captionJa);
+await writeFile(path.join('data', 'today-caption.txt'), postCaption);
+await writeFile(path.join('data', 'today-translation-ja.txt'), translationJa);
+await writeFile(path.join('data', 'today-captions-ja.txt'), translationJa);
 await writeFile(path.join('data', 'latest-run.json'), `${JSON.stringify(latestRun, null, 2)}\n`);
 await writeFile(runReadingPath, `${JSON.stringify(reading, null, 2)}\n`);
-await writeFile(runCaptionsPath, captionJa);
+await writeFile(runCaptionPath, postCaption);
+await writeFile(runTranslationJaPath, translationJa);
+await writeFile(runCaptionsPath, translationJa);
 
 console.log(`Generated ${runDir}`);
