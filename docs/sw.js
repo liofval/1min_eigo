@@ -1,23 +1,29 @@
-const CACHE_NAME = 'daily-english-reading-v16-2026-10-02';
+const CACHE_NAME = 'daily-english-reading-v17-2026-10-05';
 const APP_SHELL = [
-  './',
-  './index.html',
-  './archive.html',
-  './videos/2026-10-01.html',
-  './videos/2026-10-02.html',
-  './styles.css',
-  './app.js',
-  './manifest.webmanifest',
-  './assets/icon.png',
-  './assets/profile-vertical.png',
-  './assets/video-poster.png?v=2026-10-02-date-intro',
-  './assets/videos/2026-10-01/video-poster.png?v=2026-10-01-date-intro',
-  './assets/videos/2026-10-02/video-poster.png?v=2026-10-02-date-intro',
-  './assets/caption.txt',
-  './assets/translation-ja.txt',
-  './icons/icon-192.png',
-  './icons/icon-512.png',
-  './icons/apple-touch-icon.png'
+  "./",
+  "./index.html",
+  "./archive.html",
+  "./videos/2026-10-01.html",
+  "./videos/2026-10-02.html",
+  "./videos/2026-10-03.html",
+  "./videos/2026-10-04.html",
+  "./videos/2026-10-05.html",
+  "./styles.css",
+  "./app.js",
+  "./manifest.webmanifest",
+  "./assets/icon.png",
+  "./assets/profile-vertical.png",
+  "./assets/video-poster.png?v=2026-10-05-date-intro",
+  "./assets/videos/2026-10-01/video-poster.png?v=2026-10-01-date-intro",
+  "./assets/videos/2026-10-02/video-poster.png?v=2026-10-02-date-intro",
+  "./assets/videos/2026-10-03/video-poster.png?v=2026-10-03-date-intro",
+  "./assets/videos/2026-10-04/video-poster.png?v=2026-10-04-date-intro",
+  "./assets/videos/2026-10-05/video-poster.png?v=2026-10-05-date-intro",
+  "./assets/caption.txt",
+  "./assets/translation-ja.txt",
+  "./icons/icon-192.png",
+  "./icons/icon-512.png",
+  "./icons/apple-touch-icon.png"
 ];
 
 self.addEventListener('install', (event) => {
