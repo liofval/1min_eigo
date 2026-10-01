@@ -39,12 +39,12 @@ export const DailyEnglishReading: React.FC<DailyReadingProps> = ({
 }) => {
   const frame = useCurrentFrame();
   const {durationInFrames, fps} = useVideoConfig();
-  const firstLineY = 900;
+  const firstLineY = 940;
   const paragraphHeight = 330;
   const closingHeight = 430;
   const contentHeight = paragraphs.length * paragraphHeight + closingHeight;
   const scrollDurationSeconds = durationInFrames / fps;
-  const targetEndY = -contentHeight + 420;
+  const targetEndY = -contentHeight + 460;
   const scrollPixelsPerSecond =
     (firstLineY - targetEndY) / Math.max(1, scrollDurationSeconds - 5);
   const scrollStartY = firstLineY + scrollPixelsPerSecond * 5;
@@ -260,8 +260,8 @@ const styles: Record<string, React.CSSProperties> = {
   },
   skyOrb: {
     position: 'absolute',
-    top: 126,
-    right: 118,
+    top: 150,
+    right: 150,
     width: 128,
     height: 128,
     borderRadius: 999,
@@ -348,8 +348,8 @@ const styles: Record<string, React.CSSProperties> = {
   },
   bubbleCluster: {
     position: 'absolute',
-    top: 42,
-    left: 78,
+    top: 76,
+    left: 104,
     width: 140,
     height: 110,
   },
@@ -446,9 +446,9 @@ const styles: Record<string, React.CSSProperties> = {
   },
   header: {
     position: 'absolute',
-    top: 56,
-    left: 72,
-    right: 72,
+    top: 88,
+    left: 112,
+    right: 112,
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
@@ -478,9 +478,9 @@ const styles: Record<string, React.CSSProperties> = {
   },
   titleBlock: {
     position: 'absolute',
-    top: 206,
-    left: 72,
-    right: 72,
+    top: 250,
+    left: 112,
+    right: 112,
   },
   title: {
     margin: 0,
@@ -488,7 +488,7 @@ const styles: Record<string, React.CSSProperties> = {
     lineHeight: 1.16,
     fontWeight: 900,
     letterSpacing: '0.05em',
-    maxWidth: 900,
+    maxWidth: 820,
     color: '#0077d0',
   },
   intro: {
@@ -498,11 +498,11 @@ const styles: Record<string, React.CSSProperties> = {
     color: '#0077d0',
     fontWeight: 800,
     letterSpacing: '0.08em',
-    maxWidth: 800,
+    maxWidth: 760,
   },
   readingWindow: {
     position: 'absolute',
-    inset: '538px 72px 190px',
+    inset: '610px 112px 240px',
     overflow: 'hidden',
     borderTop: '4px solid #0077d0',
     borderBottom: '4px solid #0077d0',
@@ -516,10 +516,10 @@ const styles: Record<string, React.CSSProperties> = {
   paragraphBlock: {
     minHeight: 330,
     display: 'grid',
-    gridTemplateColumns: '82px 1fr',
-    columnGap: 22,
+    gridTemplateColumns: '76px 1fr',
+    columnGap: 20,
     alignItems: 'start',
-    padding: '30px 36px',
+    padding: '34px 26px',
   },
   number: {
     fontSize: 28,
@@ -541,7 +541,7 @@ const styles: Record<string, React.CSSProperties> = {
     minHeight: 430,
     display: 'flex',
     alignItems: 'center',
-    padding: '0 64px 0 118px',
+    padding: '0 52px 0 102px',
   },
   closing: {
     margin: 0,
@@ -553,9 +553,9 @@ const styles: Record<string, React.CSSProperties> = {
   },
   footer: {
     position: 'absolute',
-    left: 72,
-    right: 72,
-    bottom: 76,
+    left: 112,
+    right: 112,
+    bottom: 112,
     display: 'flex',
     alignItems: 'center',
     gap: 18,

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'daily-english-reading-v10-video-detail';
+const CACHE_NAME = 'daily-english-reading-v11-margin-safe-video';
 const APP_SHELL = [
   './',
   './index.html',
@@ -9,7 +9,7 @@ const APP_SHELL = [
   './manifest.webmanifest',
   './assets/icon.png',
   './assets/profile-vertical.png',
-  './assets/video-poster.png',
+  './assets/video-poster.png?v=margin-safe',
   './assets/caption.txt',
   './assets/translation-ja.txt',
   './icons/icon-192.png',
