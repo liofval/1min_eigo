@@ -213,7 +213,7 @@ const translationJa = [
 const postCaption = [
   `${story.titleJa}`,
   '',
-  '今日の70秒音読。',
+  '今日の60秒音読。',
   `${story.openingJa}`,
   '',
   '画面から英文が消える前に、声に出して読んでみてください。',

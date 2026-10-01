@@ -1,4 +1,4 @@
-const CACHE_NAME = 'daily-english-reading-v17-2026-10-05';
+const CACHE_NAME = 'daily-english-reading-v18-caption-60s';
 const APP_SHELL = [
   "./",
   "./index.html",
