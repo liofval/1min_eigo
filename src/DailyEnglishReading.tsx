@@ -48,9 +48,26 @@ export const DailyEnglishReading: React.FC<DailyReadingProps> = ({
   const scrollPixelsPerSecond =
     (firstLineY - targetEndY) / Math.max(1, scrollDurationSeconds - 5);
   const scrollStartY = firstLineY + scrollPixelsPerSecond * 5;
+  const dateHoldFrames = Math.round(fps * 0.65);
+  const dateSettleFrames = Math.round(fps * 2.35);
+  const contentDelayFrames = Math.round(fps * 1.95);
+
+  const dateProgress = interpolate(frame, [dateHoldFrames, dateSettleFrames], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const dateTop = interpolate(dateProgress, [0, 1], [764, 124]);
+  const dateLeft = interpolate(dateProgress, [0, 1], [150, 620]);
+  const dateWidth = interpolate(dateProgress, [0, 1], [780, 320]);
+  const dateFontSize = interpolate(dateProgress, [0, 1], [68, 28]);
+  const dateLetterSpacing = interpolate(dateProgress, [0, 1], [0.03, 0]);
+  const levelOpacity = interpolate(dateProgress, [0.82, 1], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
 
   const entrance = spring({
-    frame,
+    frame: Math.max(0, frame - contentDelayFrames),
     fps,
     config: {
       damping: 22,
@@ -176,10 +193,21 @@ export const DailyEnglishReading: React.FC<DailyReadingProps> = ({
       <div style={styles.star}>★</div>
       <div style={styles.header}>
         <div />
-        <div style={styles.headerMeta}>
-          <div style={styles.date}>{dateLabel}</div>
+        <div style={{...styles.headerMeta, opacity: levelOpacity}}>
           <div style={styles.level}>{level}</div>
         </div>
+      </div>
+      <div
+        style={{
+          ...styles.dateFlyer,
+          top: dateTop,
+          left: dateLeft,
+          width: dateWidth,
+          fontSize: dateFontSize,
+          letterSpacing: `${dateLetterSpacing}em`,
+        }}
+      >
+        {dateLabel}
       </div>
 
       <div
@@ -193,7 +221,14 @@ export const DailyEnglishReading: React.FC<DailyReadingProps> = ({
         <p style={styles.intro}>{intro}</p>
       </div>
 
-      <div style={{...styles.readingWindow, borderTopColor: ruleColor, borderBottomColor: ruleColor}}>
+      <div
+        style={{
+          ...styles.readingWindow,
+          opacity: entrance,
+          borderTopColor: ruleColor,
+          borderBottomColor: ruleColor,
+        }}
+      >
         <div
           style={{
             ...styles.scroller,
@@ -230,7 +265,7 @@ export const DailyEnglishReading: React.FC<DailyReadingProps> = ({
         </div>
       </div>
 
-      <div style={{...styles.footer, color: inkColor}}>
+      <div style={{...styles.footer, opacity: entrance, color: inkColor}}>
         <span style={{...styles.dot, opacity: pulse}} />
         <span>Read it before it disappears</span>
       </div>
@@ -446,7 +481,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   header: {
     position: 'absolute',
-    top: 124,
+    top: 176,
     left: 140,
     right: 140,
     display: 'flex',
@@ -466,6 +501,15 @@ const styles: Record<string, React.CSSProperties> = {
     color: '#0077d0',
     fontSize: 28,
     fontWeight: 800,
+  },
+  dateFlyer: {
+    position: 'absolute',
+    color: '#0077d0',
+    fontWeight: 900,
+    lineHeight: 1.08,
+    textAlign: 'center',
+    whiteSpace: 'nowrap',
+    textShadow: '0 12px 34px rgba(0,119,208,0.12)',
   },
   level: {
     border: '3px solid #0077d0',
