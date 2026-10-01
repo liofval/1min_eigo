@@ -555,7 +555,7 @@ const styles: Record<string, React.CSSProperties> = {
     position: 'absolute',
     left: 140,
     right: 140,
-    bottom: 168,
+    bottom: 236,
     display: 'flex',
     alignItems: 'center',
     gap: 18,
