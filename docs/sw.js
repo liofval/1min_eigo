@@ -1,12 +1,14 @@
-const CACHE_NAME = 'daily-english-reading-v3-install-help';
+const CACHE_NAME = 'daily-english-reading-v5-poster';
 const APP_SHELL = [
   './',
   './index.html',
+  './archive.html',
   './styles.css',
   './app.js',
   './manifest.webmanifest',
   './assets/icon.png',
   './assets/profile-vertical.png',
+  './assets/video-poster.png',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/apple-touch-icon.png'
