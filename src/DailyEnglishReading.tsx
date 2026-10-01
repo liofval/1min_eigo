@@ -250,7 +250,7 @@ const styles: Record<string, React.CSSProperties> = {
     position: 'absolute',
     inset: 0,
     background:
-      'radial-gradient(circle at 82% 12%, rgba(255,199,62,0.42) 0%, rgba(255,176,62,0.2) 20%, rgba(255,216,133,0.1) 40%, rgba(255,255,255,0) 70%)',
+      'radial-gradient(circle at 88% 18%, rgba(255,199,62,0.42) 0%, rgba(255,176,62,0.2) 20%, rgba(255,216,133,0.1) 40%, rgba(255,255,255,0) 70%)',
   },
   nightSky: {
     position: 'absolute',
@@ -260,8 +260,8 @@ const styles: Record<string, React.CSSProperties> = {
   },
   skyOrb: {
     position: 'absolute',
-    top: 150,
-    right: 150,
+    top: 214,
+    right: 84,
     width: 128,
     height: 128,
     borderRadius: 999,
@@ -446,7 +446,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   header: {
     position: 'absolute',
-    top: 88,
+    top: 124,
     left: 140,
     right: 140,
     display: 'flex',
