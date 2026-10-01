@@ -39,10 +39,46 @@
           </p>
           <div class="hero-actions">
             <a class="primary-action" href="#video">動画を見る</a>
-            <button class="secondary-action" type="button" data-install hidden>PWAをインストール</button>
+            <button class="secondary-action" type="button" data-install>インストール方法</button>
           </div>
         </div>
       </section>
+
+      <dialog class="install-dialog" data-install-dialog aria-labelledby="install-title">
+        <form method="dialog">
+          <button class="dialog-close" type="submit" aria-label="閉じる">×</button>
+        </form>
+        <p class="eyebrow">Install this PWA</p>
+        <h2 id="install-title">ホーム画面に追加する</h2>
+        <p class="install-status" data-install-status>
+          このブラウザでは、メニューからホーム画面に追加できます。
+        </p>
+        <div class="install-steps" data-install-steps>
+          <section>
+            <h3>iPhone / iPad</h3>
+            <ol>
+              <li>Safariでこのページを開きます。</li>
+              <li>共有ボタンをタップします。</li>
+              <li>「ホーム画面に追加」を選びます。</li>
+            </ol>
+          </section>
+          <section>
+            <h3>Android / Chrome</h3>
+            <ol>
+              <li>Chromeでこのページを開きます。</li>
+              <li>右上のメニューをタップします。</li>
+              <li>「アプリをインストール」または「ホーム画面に追加」を選びます。</li>
+            </ol>
+          </section>
+          <section>
+            <h3>PC / Chrome・Edge</h3>
+            <ol>
+              <li>アドレスバー右側のインストールアイコンを押します。</li>
+              <li>表示された確認画面でインストールします。</li>
+            </ol>
+          </section>
+        </div>
+      </dialog>
 
       <section id="video" class="section video-section" aria-labelledby="video-title">
         <div class="section-heading">
@@ -112,21 +148,6 @@
           </article>
           <article>
             <span class="index">03</span>
-            <h3>朝から夜への背景</h3>
-            <p>朝の黄色、昼の白、夜の青へ変わる背景は、1日の中で少しずつ練習を続けるイメージです。</p>
-          </article>
-          <article>
-            <span class="index">04</span>
-            <h3>鳥から星へ</h3>
-            <p>小さな鳥は、時間が進むと星に変わります。日常の小さな話題が、英語で話せる材料になることを表しています。</p>
-          </article>
-          <article>
-            <span class="index">05</span>
-            <h3>右上の月</h3>
-            <p>月はずっと画面に残ります。文章が動いても、落ち着いて読み続けるための目印です。</p>
-          </article>
-          <article>
-            <span class="index">06</span>
             <h3>日本語訳</h3>
             <p>投稿キャプションには日本語訳を添えられます。英語だけで意味が取りにくい日も、内容を確認できます。</p>
           </article>

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'daily-english-reading-v2-cloud-logo';
+const CACHE_NAME = 'daily-english-reading-v3-install-help';
 const APP_SHELL = [
   './',
   './index.html',
