@@ -9,7 +9,7 @@ Remotion で縦型の英語音読動画を作り、GitHub Pages で公開する�
 - 1080 x 1920 の縦型 Remotion 動画
 - 30fps / 70秒
 - A2-B1 程度のやさしい英語本文
-- 投稿キャプション案、日本語訳、出典メモ
+- 日本語訳、出典メモ
 - GitHub Pages 用の静的サイト
 - PWA 用 `manifest.webmanifest` と Service Worker
 - カレンダー形式の動画アーカイブ
@@ -49,7 +49,7 @@ npm run daily
 
 このコマンドは次を実行します。
 
-1. `scripts/generate-reading.mjs` で当日分の音読本文、キャプション案、日本語訳を生成
+1. `scripts/generate-reading.mjs` で当日分の音読本文、投稿用キャプション案、日本語訳を生成
 2. `scripts/render-latest.mjs` で Remotion 動画をレンダリング
 3. 実行ごとの成果物を `out/` 配下に保存
 
@@ -63,7 +63,7 @@ data/today-captions-ja.txt
 data/latest-run.json
 ```
 
-`data/` と `out/` はローカル生成物です。公開用に残す動画は `docs/assets/videos/YYYY-MM-DD/` にコピーして管理します。
+`data/` と `out/` はローカル生成物です。投稿用キャプション案は公開ページには載せず、ローカル生成物として管理します。公開用に残す動画は `docs/assets/videos/YYYY-MM-DD/` にコピーして管理します。
 
 ## Output Structure
 
@@ -72,7 +72,6 @@ data/latest-run.json
 ```text
 out/2026-10-05-flood-maps-for-more-places/
   daily-english-reading.mp4
-  caption.txt
   translation-ja.txt
   captions-ja.txt
   reading.json
@@ -85,7 +84,6 @@ out/2026-10-05-flood-maps-for-more-places/
 docs/assets/videos/2026-10-05/
   daily-english-reading.mp4
   video-poster.png
-  caption.txt
   translation-ja.txt
   captions-ja.txt
   sources.md
@@ -98,7 +96,6 @@ docs/videos/2026-10-05.html
 ```text
 docs/assets/daily-english-reading.mp4
 docs/assets/video-poster.png
-docs/assets/caption.txt
 docs/assets/translation-ja.txt
 docs/assets/sources.md
 ```
@@ -123,14 +120,14 @@ https://liofval.github.io/1min_eigo/archive.html
 
 ## Publishing Workflow
 
-1. 音読本文、キャプション案、日本語訳、出典を作る
+1. 音読本文、投稿用キャプション案、日本語訳、出典を作る
 2. Remotion で `daily-english-reading.mp4` をレンダリングする
 3. `ffmpeg` で冒頭フレームの `video-poster.png` を作る
 4. 日別アセットを `docs/assets/videos/YYYY-MM-DD/` に保存する
 5. 日別詳細ページを `docs/videos/YYYY-MM-DD.html` に追加する
 6. `docs/archive.html` のカレンダーとモーダルに日付を追加する
 7. 最新分を `docs/assets/` 直下へコピーする
-8. `docs/index.html` の最新動画、キャプション、日本語訳、出典を更新する
+8. `docs/index.html` の最新動画、日本語訳、出典を更新する
 9. `docs/sw.js` のキャッシュ名と `APP_SHELL` を更新する
 10. GitHub Pages に反映するため `main` に push する
 
