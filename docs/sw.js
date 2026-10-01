@@ -1,4 +1,4 @@
-const CACHE_NAME = 'daily-english-reading-v5-poster';
+const CACHE_NAME = 'daily-english-reading-v6-network-first';
 const APP_SHELL = [
   './',
   './index.html',
@@ -34,6 +34,19 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') {
+    return;
+  }
+
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          const responseToCache = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseToCache));
+          return response;
+        })
+        .catch(() => caches.match(event.request).then((cached) => cached || caches.match('./index.html')))
+    );
     return;
   }
 
