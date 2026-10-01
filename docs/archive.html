@@ -37,25 +37,93 @@
             公開した音読動画を日付順にまとめています。新しい動画を追加したら、このページにカードを足していきます。
           </p>
         </div>
-        <div class="archive-grid">
-          <article class="archive-card">
-            <a class="archive-thumb" href="./assets/daily-english-reading.mp4">
-              <img src="./assets/video-poster.png" alt="">
-              <span>70 sec</span>
-            </a>
-            <div class="archive-body">
-              <p class="archive-date">2026.10.01</p>
-              <h2>Wallpaper That Makes Power</h2>
-              <p>室内の湿気から小さな電力を作る壁紙のニュースを、やさしい英語で読む回。</p>
-              <div class="archive-links">
-                <a href="./assets/daily-english-reading.mp4">動画を開く</a>
-                <a href="./assets/sources.md">出典を見る</a>
-                <a href="./assets/captions-ja.txt">キャプションを見る</a>
-              </div>
-            </div>
-          </article>
+        <div class="calendar-shell" aria-label="2026年10月の動画カレンダー">
+          <div class="calendar-head">
+            <p>2026</p>
+            <h2>October</h2>
+          </div>
+          <div class="calendar-weekdays" aria-hidden="true">
+            <span>Sun</span>
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+          </div>
+          <div class="calendar-grid">
+            <span class="calendar-empty"></span>
+            <span class="calendar-empty"></span>
+            <span class="calendar-empty"></span>
+            <span class="calendar-empty"></span>
+            <button class="calendar-day has-video" type="button" data-open-day="2026-10-01">
+              <span class="day-number">1</span>
+              <span class="day-title">Wallpaper That Makes Power</span>
+              <span class="day-badge">70s</span>
+            </button>
+            <span class="calendar-day"><span class="day-number">2</span></span>
+            <span class="calendar-day"><span class="day-number">3</span></span>
+            <span class="calendar-day"><span class="day-number">4</span></span>
+            <span class="calendar-day"><span class="day-number">5</span></span>
+            <span class="calendar-day"><span class="day-number">6</span></span>
+            <span class="calendar-day"><span class="day-number">7</span></span>
+            <span class="calendar-day"><span class="day-number">8</span></span>
+            <span class="calendar-day"><span class="day-number">9</span></span>
+            <span class="calendar-day"><span class="day-number">10</span></span>
+            <span class="calendar-day"><span class="day-number">11</span></span>
+            <span class="calendar-day"><span class="day-number">12</span></span>
+            <span class="calendar-day"><span class="day-number">13</span></span>
+            <span class="calendar-day"><span class="day-number">14</span></span>
+            <span class="calendar-day"><span class="day-number">15</span></span>
+            <span class="calendar-day"><span class="day-number">16</span></span>
+            <span class="calendar-day"><span class="day-number">17</span></span>
+            <span class="calendar-day"><span class="day-number">18</span></span>
+            <span class="calendar-day"><span class="day-number">19</span></span>
+            <span class="calendar-day"><span class="day-number">20</span></span>
+            <span class="calendar-day"><span class="day-number">21</span></span>
+            <span class="calendar-day"><span class="day-number">22</span></span>
+            <span class="calendar-day"><span class="day-number">23</span></span>
+            <span class="calendar-day"><span class="day-number">24</span></span>
+            <span class="calendar-day"><span class="day-number">25</span></span>
+            <span class="calendar-day"><span class="day-number">26</span></span>
+            <span class="calendar-day"><span class="day-number">27</span></span>
+            <span class="calendar-day"><span class="day-number">28</span></span>
+            <span class="calendar-day"><span class="day-number">29</span></span>
+            <span class="calendar-day"><span class="day-number">30</span></span>
+            <span class="calendar-day"><span class="day-number">31</span></span>
+          </div>
         </div>
       </section>
+
+      <dialog class="day-dialog" data-day-dialog aria-labelledby="day-dialog-title">
+        <div class="day-dialog-frame">
+          <div class="day-dialog-top">
+            <div>
+              <p class="archive-date">2026.10</p>
+              <h2 id="day-dialog-title">これまでの動画</h2>
+            </div>
+            <button class="dialog-close" type="button" data-close-day aria-label="閉じる">×</button>
+          </div>
+          <div class="day-scroll" tabindex="0">
+            <article class="day-panel" data-day-panel="2026-10-01">
+              <a class="day-thumb" href="./assets/daily-english-reading.mp4">
+                <img src="./assets/video-poster.png" alt="">
+                <span>70 sec</span>
+              </a>
+              <div class="day-detail">
+                <p class="archive-date">2026.10.01 Thu</p>
+                <h3>Wallpaper That Makes Power</h3>
+                <p>室内の湿気から小さな電力を作る壁紙のニュースを、やさしい英語で読む回。</p>
+                <div class="archive-links">
+                  <a href="./assets/daily-english-reading.mp4">動画を開く</a>
+                  <a href="./assets/sources.md">出典を見る</a>
+                  <a href="./assets/captions-ja.txt">キャプションを見る</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </dialog>
     </main>
 
     <footer class="footer">

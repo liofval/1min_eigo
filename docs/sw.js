@@ -1,4 +1,4 @@
-const CACHE_NAME = 'daily-english-reading-v6-network-first';
+const CACHE_NAME = 'daily-english-reading-v8-calendar-archive';
 const APP_SHELL = [
   './',
   './index.html',

@@ -2,6 +2,9 @@ const installButton = document.querySelector('[data-install]');
 const installDialog = document.querySelector('[data-install-dialog]');
 const installStatus = document.querySelector('[data-install-status]');
 const copyButtons = document.querySelectorAll('[data-copy]');
+const dayDialog = document.querySelector('[data-day-dialog]');
+const dayButtons = document.querySelectorAll('[data-open-day]');
+const dayCloseButtons = document.querySelectorAll('[data-close-day]');
 let deferredPrompt;
 
 const isStandalone = () =>
@@ -90,6 +93,37 @@ copyButtons.forEach((button) => {
       button.textContent = 'コピー';
     }, 1400);
   });
+});
+
+dayButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const panel = document.querySelector(`[data-day-panel="${button.dataset.openDay}"]`);
+    if (!dayDialog || !panel) {
+      return;
+    }
+
+    if (dayDialog.showModal) {
+      dayDialog.showModal();
+      window.requestAnimationFrame(() => {
+        panel.scrollIntoView({block: 'start'});
+      });
+      return;
+    }
+
+    window.location.href = './assets/daily-english-reading.mp4';
+  });
+});
+
+dayCloseButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    dayDialog?.close();
+  });
+});
+
+dayDialog?.addEventListener('click', (event) => {
+  if (event.target === dayDialog) {
+    dayDialog.close();
+  }
 });
 
 if ('serviceWorker' in navigator) {
