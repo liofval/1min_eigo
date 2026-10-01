@@ -1,0 +1,25 @@
+{
+  "name": "daily-english-reading-remotion",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-reading.mjs",
+    "studio": "remotion studio src/index.ts",
+    "render": "node scripts/render-latest.mjs",
+    "daily": "npm run generate && npm run render",
+    "serve:homepage": "python3 -m http.server 8777 --directory docs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.531",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.531",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "7.0.2"
+  }
+}

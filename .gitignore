@@ -1,0 +1,12 @@
+/.DS_Store
+
+node_modules/
+out/
+.remotion/
+tmp/
+.playwright-mcp/
+
+# Generated daily content. Remove this line if you want to commit a specific day.
+data/today-reading.json
+data/today-captions-ja.txt
+data/latest-run.json

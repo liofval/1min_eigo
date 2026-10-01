@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0077d0">
+    <meta
+      name="description"
+      content="日常英語や小さなニュースを、画面から消える前に声に出して読むための縦型音読動画。"
+    >
+    <title>Daily English Reading</title>
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+    <link rel="icon" href="./icons/icon-192.png">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="サイトヘッダー">
+      <a class="brand" href="#top" aria-label="Daily English Reading">
+        <img src="./assets/icon.png" alt="" width="44" height="44">
+        <span>Daily English Reading</span>
+      </a>
+      <nav class="nav" aria-label="ページ内ナビゲーション">
+        <a href="#video">Video</a>
+        <a href="#meaning">Meaning</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-bg" src="./assets/profile-vertical.png" alt="">
+        <div class="hero-content">
+          <p class="eyebrow">Read it before it disappears</p>
+          <h1 id="hero-title">日常の小さな話題を、英語で声に出す。</h1>
+          <p class="lead">
+            画面に流れる英文を、消える前に読むための縦型音読動画です。
+            今日の題材は、室内の湿気から小さな電力を作る新しい壁紙のニュース。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#video">動画を見る</a>
+            <button class="secondary-action" type="button" data-install hidden>PWAをインストール</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="video" class="section video-section" aria-labelledby="video-title">
+        <div class="section-heading">
+          <p class="eyebrow">70 seconds aloud reading</p>
+          <h2 id="video-title">今日の音読動画</h2>
+          <p>
+            ニュースをそのまま読むのではなく、A2-B1くらいのやさしい英語に言い換えています。
+            本文が流れている間に声に出すことで、自然なスピード感を作ります。
+          </p>
+        </div>
+        <div class="video-layout">
+          <video
+            class="reading-video"
+            src="./assets/daily-english-reading.mp4"
+            controls
+            playsinline
+            preload="metadata"
+            poster="./assets/profile-vertical.png"
+          ></video>
+          <aside class="caption-panel" aria-labelledby="caption-title">
+            <div class="panel-header">
+              <h3 id="caption-title">キャプション用日本語訳</h3>
+              <button type="button" data-copy="#caption-text">コピー</button>
+            </div>
+            <pre id="caption-text">発電する壁紙
+
+ニューヨークの研究チームが、新しい種類の壁紙を作りました。
+
+それはただ壁に貼られているだけではありません。空気中の湿気を取り込むことができます。
+
+その湿気が、紙に少量の電気を作らせる助けになります。
+
+このアイデアはまだ新しいので、今すぐ家全体に電力を送れるわけではありません。
+
+でも実験では、その壁紙がワイヤレスキーボードを動かす助けになりました。
+
+研究チームは、部屋のセンサーのような小さなものに電力を送れるようになることを期待しています。
+
+室内の湿度を調整する助けにもなるかもしれません。
+
+このニュースを聞いて、私は自分の部屋の壁を少し違って見ました。
+
+いつか、私たちの部屋が周りの機器を静かに助けてくれるかもしれません。
+
+こうした小さなアイデアは、未来を日常に少し近づけてくれます。
+
+もう一度読んで、このニュースを友だちに説明するところを想像してみましょう。</pre>
+          </aside>
+        </div>
+      </section>
+
+      <section id="meaning" class="section meaning-section" aria-labelledby="meaning-title">
+        <div class="section-heading">
+          <p class="eyebrow">What the screen means</p>
+          <h2 id="meaning-title">動画内の表示の意味</h2>
+        </div>
+        <div class="meaning-grid">
+          <article>
+            <span class="index">01</span>
+            <h3>流れる英文</h3>
+            <p>本文は下から上へゆっくり流れます。画面に残っている間に読むことで、音読のリズムを作ります。</p>
+          </article>
+          <article>
+            <span class="index">02</span>
+            <h3>A2-B1</h3>
+            <p>CEFRの初級後半から中級前半くらいの目安です。短い文で、日常会話にも使いやすい表現にしています。</p>
+          </article>
+          <article>
+            <span class="index">03</span>
+            <h3>朝から夜への背景</h3>
+            <p>朝の黄色、昼の白、夜の青へ変わる背景は、1日の中で少しずつ練習を続けるイメージです。</p>
+          </article>
+          <article>
+            <span class="index">04</span>
+            <h3>鳥から星へ</h3>
+            <p>小さな鳥は、時間が進むと星に変わります。日常の小さな話題が、英語で話せる材料になることを表しています。</p>
+          </article>
+          <article>
+            <span class="index">05</span>
+            <h3>右上の月</h3>
+            <p>月はずっと画面に残ります。文章が動いても、落ち着いて読み続けるための目印です。</p>
+          </article>
+          <article>
+            <span class="index">06</span>
+            <h3>日本語訳</h3>
+            <p>投稿キャプションには日本語訳を添えられます。英語だけで意味が取りにくい日も、内容を確認できます。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section sources-section" aria-labelledby="sources-title">
+        <div class="section-heading">
+          <p class="eyebrow">Today&apos;s source</p>
+          <h2 id="sources-title">今日の題材</h2>
+          <p>
+            2026年9月末に公開された、湿気から小さな電力を作る壁紙の研究ニュースをもとにしています。
+            音読本文は、出典を参考にしたオリジナルの要約です。
+          </p>
+        </div>
+        <div class="source-links">
+          <a href="https://www.binghamton.edu/news/story/6491/wallpaper-that-generates-power-binghamton-university-researchers-have-developed-it" rel="noreferrer" target="_blank">Binghamton University News</a>
+          <a href="https://thegoodnewsbrief.com/stories/paper-wallpaper-generates-electricity-from-indoor-humidity-while-lowerin-peeb2m" rel="noreferrer" target="_blank">The Good News Brief</a>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">お問い合わせ</h2>
+          <p>
+            動画の内容、英文の難易度、コラボレーションについては、下記のメールアドレスまでご連絡ください。
+          </p>
+        </div>
+        <a class="contact-link" href="mailto:hello@example.com">hello@example.com</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Daily English Reading</p>
+      <p>Small everyday stories, spoken aloud.</p>
+    </footer>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
