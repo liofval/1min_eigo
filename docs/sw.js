@@ -1,8 +1,9 @@
-const CACHE_NAME = 'daily-english-reading-v19-hide-captions';
+const CACHE_NAME = 'daily-english-reading-v20-level-chart';
 const APP_SHELL = [
   "./",
   "./index.html",
   "./archive.html",
+  "./level.html",
   "./videos/2026-10-01.html",
   "./videos/2026-10-02.html",
   "./videos/2026-10-03.html",

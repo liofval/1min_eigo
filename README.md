@@ -13,6 +13,7 @@ Remotion で縦型の英語音読動画を作り、GitHub Pages で公開する�
 - GitHub Pages 用の静的サイト
 - PWA 用 `manifest.webmanifest` と Service Worker
 - カレンダー形式の動画アーカイブ
+- A1-C2 のレベルチャート画面
 
 ## Setup
 
@@ -100,6 +101,12 @@ docs/assets/translation-ja.txt
 docs/assets/sources.md
 ```
 
+レベルチャート:
+
+```text
+docs/level.html
+```
+
 ## Published Archive
 
 現在は 2026-10-01 から 2026-10-05 までの5日分を保存済みです。
@@ -128,8 +135,9 @@ https://liofval.github.io/1min_eigo/archive.html
 6. `docs/archive.html` のカレンダーとモーダルに日付を追加する
 7. 最新分を `docs/assets/` 直下へコピーする
 8. `docs/index.html` の最新動画、日本語訳、出典を更新する
-9. `docs/sw.js` のキャッシュ名と `APP_SHELL` を更新する
-10. GitHub Pages に反映するため `main` に push する
+9. レベル説明を変えた場合は `docs/level.html` とトップページの説明も更新する
+10. `docs/sw.js` のキャッシュ名と `APP_SHELL` を更新する
+11. GitHub Pages に反映するため `main` に push する
 
 ## Checks
 

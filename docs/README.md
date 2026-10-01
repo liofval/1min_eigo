@@ -9,6 +9,7 @@
 ```text
 docs/index.html              # トップページ、最新動画、日本語訳、出典
 docs/archive.html            # カレンダー形式の動画一覧
+docs/level.html              # A1-C2のレベルチャート
 docs/videos/YYYY-MM-DD.html  # 日別の動画詳細ページ
 docs/styles.css              # サイト全体のスタイル
 docs/app.js                  # コピー、PWA案内、アーカイブモーダル
@@ -47,7 +48,8 @@ docs/assets/videos/YYYY-MM-DD/
 4. `docs/archive.html` のモーダル内に `data-day-panel="YYYY-MM-DD"` のパネルを追加する
 5. 最新分として `docs/assets/` 直下の動画、ポスター、日本語訳、出典を差し替える
 6. `docs/index.html` の動画URL、ポスターURL、日本語訳、出典を更新する
-7. `docs/sw.js` の `CACHE_NAME` を更新し、`APP_SHELL` に新しい詳細ページとポスターを追加する
+7. レベル説明を変更した場合は `docs/level.html` も更新する
+8. `docs/sw.js` の `CACHE_NAME` を更新し、`APP_SHELL` に新しい詳細ページとポスターを追加する
 
 ## Local Preview
 
