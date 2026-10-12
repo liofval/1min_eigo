@@ -71,7 +71,7 @@ data/latest-run.json
 毎回の成果物は `out/` にまとまります。
 
 ```text
-out/2026-10-05-flood-maps-for-more-places/
+out/2026-10-15-a-plan-before-an-emergency/
   daily-english-reading.mp4
   translation-ja.txt
   captions-ja.txt
@@ -82,14 +82,14 @@ out/2026-10-05-flood-maps-for-more-places/
 公開サイト用の保存先:
 
 ```text
-docs/assets/videos/2026-10-05/
+docs/assets/videos/2026-10-15/
   daily-english-reading.mp4
   video-poster.png
   translation-ja.txt
   captions-ja.txt
   sources.md
 
-docs/videos/2026-10-05.html
+docs/videos/2026-10-15.html
 ```
 
 トップページで表示する最新動画は次のファイルです。
@@ -109,7 +109,7 @@ docs/level.html
 
 ## Published Archive
 
-現在は 2026-10-01 から 2026-10-05 までの5日分を保存済みです。
+現在は 2026-10-01 から 2026-10-15 までの15日分を保存済みです。
 
 | Date | Title |
 | --- | --- |
@@ -118,6 +118,16 @@ docs/level.html
 | 2026-10-03 | PRIMA Opens A New Window |
 | 2026-10-04 | Learning In More Languages |
 | 2026-10-05 | Flood Maps For More Places |
+| 2026-10-06 | Electric Buses At School |
+| 2026-10-07 | Air Quality On The Map |
+| 2026-10-08 | Food That Lasts Longer |
+| 2026-10-09 | A Safer Ride By Bike |
+| 2026-10-10 | Sleep Makes Tomorrow Easier |
+| 2026-10-11 | A Weather Alert Before Rain |
+| 2026-10-12 | A Phone Warning That Helps |
+| 2026-10-13 | A Library Opens Online |
+| 2026-10-14 | Water Saved At Home |
+| 2026-10-15 | A Plan Before An Emergency |
 
 アーカイブページ:
 
@@ -156,7 +166,7 @@ ffprobe -v error \
   -show_entries stream=width,height,r_frame_rate \
   -show_entries format=duration,size \
   -of default=noprint_wrappers=1 \
-  docs/assets/videos/2026-10-05/daily-english-reading.mp4
+  docs/assets/videos/2026-10-15/daily-english-reading.mp4
 ```
 
 公開確認:
